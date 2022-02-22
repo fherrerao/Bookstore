@@ -1,17 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Header from './components/Header';
-import Books from './components/Books';
-import Categories from './components/Categories';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header";
+import Books from "./pages/Books";
+import Categories from "./pages/Categories";
 
 function App() {
   return (
     <div>
       <Router>
-        <Header/>
+        <Header />
         <Routes>
-          <Route path="/" element={<Books/>}/>
-          <Route path="/categories" element={<Categories/>}/>
+          <Route path="/" element={<Books />} />
+          <Route path="/categories" element={<Categories />} />
         </Routes>
       </Router>
     </div>
