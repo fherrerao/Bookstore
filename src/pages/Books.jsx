@@ -1,13 +1,11 @@
-import Library from "../components/Library";
-import AddBook from "../components/AddBook";
+import Library from '../components/Library';
+import AddBook from '../components/AddBook';
 
-const Books = () => {
-  return (
-    <>
-      <Library />
-      <AddBook />
-    </>
-  );
-};
+const Books = () => (
+  <>
+    <Library />
+    <AddBook />
+  </>
+);
 
 export default Books;
