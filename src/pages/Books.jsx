@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import Library from "../components/Library";
 import AddBook from "../components/AddBook";
 

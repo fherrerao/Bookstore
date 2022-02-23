@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from 'uuid';
@@ -20,7 +19,6 @@ const AddBook = () => {
 
   const sendBook = (e) => {
     e.preventDefault();
-    console.log(book);
     dispatch(addBook(book))
   }
 
