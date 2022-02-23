@@ -1,8 +1,9 @@
+/* eslint-disable */
+
 import Library from "../components/Library";
 import AddBook from "../components/AddBook";
 
 const Books = () => {
-  console.log(<Library />);
   return (
     <>
       <Library />

@@ -1,4 +1,7 @@
-import Book from "./Book";
+/* eslint-disable */
+
+import Book from './Book';
+// import { useSelector } from 'react-redux';
 
 const Library = () => {
   const arrBooks = [
@@ -20,8 +23,8 @@ const Library = () => {
       title: "Frankenstein",
       author: "Mary Shelley",
     },
-  ];
-
+  ]
+  // const arrBooks = useSelector((book) => book.booksReducer)
   return (
     <ul>
       {arrBooks.map((item) => (
