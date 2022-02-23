@@ -1,30 +1,10 @@
 /* eslint-disable */
-
+import { useSelector } from 'react-redux';
 import Book from './Book';
-// import { useSelector } from 'react-redux';
 
 const Library = () => {
-  const arrBooks = [
-    {
-      id: 1,
-      category: "Comedy",
-      title: "Wild",
-      author: "Tom Sharpe",
-    },
-    {
-      id: 2,
-      category: "Action",
-      title: "Mr. Mercedes",
-      author: "Stephen King",
-    },
-    {
-      id: 3,
-      category: "horror",
-      title: "Frankenstein",
-      author: "Mary Shelley",
-    },
-  ]
-  // const arrBooks = useSelector((book) => book.booksReducer)
+
+  const arrBooks = useSelector((state) => state.booksReducer);
   return (
     <ul>
       {arrBooks.map((item) => (
