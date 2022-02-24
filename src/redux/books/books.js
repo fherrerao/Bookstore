@@ -3,7 +3,7 @@ const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const GET_BOOKS_SUCCESS = 'bookStore/books/GET_BOOK';
 
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZF9EEG52YEvEwT4utW6R/books';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/mZjXugopFEpYP0EAtAsv/books';
 
 // ACTIONS
 export const addBook = (payload) => ({
@@ -22,7 +22,10 @@ export const sentBookAPI = (payload) => (
       method: 'POST',
       body: JSON.stringify({
         item_id: payload.id,
-        title: payload.title,
+        title: {
+          bookTitle: payload.title,
+          bookAuthor: payload.author,
+        },
         category: payload.category,
       }),
       headers: {
@@ -33,12 +36,39 @@ export const sentBookAPI = (payload) => (
   }
 );
 
-export const getBook = () => async (dispatch) => {
+export const deleteBook = (id) => (
+  async (dispatch) => {
+    const response = await fetch(`${url}/${id}`, {
+      method: 'DELETE',
+      body: JSON.stringify({
+        item_id: id,
+      }),
+      headers: {
+        'Content-type': 'application/JSON',
+      },
+    });
+    if (response.status === 201) {
+      dispatch(removeBook(id));
+    }
+  }
+);
+
+export const getBook = async (dispatch) => {
   const response = await fetch(url);
-  const data = await response.json();
-  dispatch({
-    type: GET_BOOKS_SUCCESS,
-    payload: data,
+  const dataBooks = await response.json();
+  const arrBooks = Object.entries(dataBooks);
+  arrBooks.forEach((item) => {
+    const [id, value] = item;
+    const { title, category } = value[0];
+    const { bookTitle, bookAuthor } = title;
+
+    const newBook = {
+      id,
+      title: bookTitle,
+      author: bookAuthor,
+      category,
+    };
+    dispatch(addBook(newBook));
   });
 };
 
