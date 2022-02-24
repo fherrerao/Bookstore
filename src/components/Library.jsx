@@ -1,12 +1,8 @@
 import { useSelector } from 'react-redux';
 import Book from './Book';
-// import { getBook } from '../redux/books/books';
 
 const Library = () => {
   const arrBooks = useSelector((state) => state.booksReducer);
-  // const dispatch = useDispatch();
-  // const booksAPI = useSelector((store) => store.booksReducer);
-  // console.log(booksAPI);
 
   return (
     <ul>
@@ -21,7 +17,6 @@ const Library = () => {
           />
         ))
       }
-      {/* <button onClick={() => dispatch(getBook())}>getBooks</button> */}
     </ul>
   );
 };
