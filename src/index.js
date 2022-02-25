@@ -9,7 +9,7 @@ import { getBook } from './redux/books/books';
 store.dispatch(getBook);
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={store} key={1}>
     <App />
   </Provider>,
   document.getElementById('root'),
