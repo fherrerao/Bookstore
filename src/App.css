@@ -1,6 +1,9 @@
+:root {
+  --white: #e8e8e8;
+}
+
 html {
   box-sizing: border-box;
-  /* font-size: 62.5%; */
 }
 
 *,

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-// import { addBook } from '../redux/books/books';
 import { sentBookAPI } from '../redux/books/books';
+import './addBook.css';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -25,20 +25,22 @@ const AddBook = () => {
 
   return (
     <>
-      <h2>ADD NEW BOOK</h2>
+      <div class="Line container"></div>
+      <div className="container">
+        <h2 className="add-book-title">ADD NEW BOOK</h2>
+        <form onSubmit={sendBook} action="">
+          <input className="input-text" type="text" placeholder="Title" required onChange={(e) => setTitle(e.target.value)} />
+          <input className="input-text" type="text" placeholder="Author" required onChange={(e) => setAuthor(e.target.value)} />
 
-      <form onSubmit={sendBook} action="">
-        <input type="text" placeholder="Title" required onChange={(e) => setTitle(e.target.value)} />
-        <input type="text" placeholder="Author" required onChange={(e) => setAuthor(e.target.value)} />
-
-        <select name="categories" id="category" required onChange={(e) => setCategory(e.target.value)}>
-          <option>--Category--</option>
-          <option value="suspense">Suspense</option>
-          <option value="terror">Terror</option>
-          <option value="comedy">Comedy</option>
-        </select>
-        <button type="submit">Add Book</button>
-      </form>
+          <select className="combo-box" name="categories" id="category" required onChange={(e) => setCategory(e.target.value)}>
+            <option>--Category--</option>
+            <option value="suspense">Suspense</option>
+            <option value="terror">Terror</option>
+            <option value="comedy">Comedy</option>
+          </select>
+          <button className="btn-add" type="submit">Add Book</button>
+        </form>
+      </div>
     </>
   );
 };
