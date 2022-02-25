@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { deleteBook } from '../redux/books/books';
+import './book.css'
 
 const Book = (props) => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Book = (props) => {
   };
 
   return (
-    <li>
+    <li className="book-container container">
       <h4>{category}</h4>
       <h2>{title}</h2>
       <h3>{author}</h3>
