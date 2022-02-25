@@ -10,7 +10,7 @@ store.dispatch(getBook);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <App key={1} />
   </Provider>,
   document.getElementById('root'),
 );
