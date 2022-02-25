@@ -19,10 +19,17 @@ const Book = (props) => {
 
   return (
     <li className="book-container container">
-      <h4>{category}</h4>
-      <h2>{title}</h2>
-      <h3>{author}</h3>
-      <button type="button" onClick={removeHandler}>Remove</button>
+      <h4 className="category">{category}</h4>
+      <h2 className="title-book">{title}</h2>
+      <h3 className="author"> {author}</h3>
+      <div className="d-flex a-items-center">
+        <button className="btn-actions">Comments</button>
+        <div class="Line-2"></div>
+        <button className="btn-actions" type="button" onClick={removeHandler}>Remove</button>
+        <div class="Line-2"></div>
+        <button className="btn-actions">Edit</button>
+      </div>
+
     </li>
   );
 };
