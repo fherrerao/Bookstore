@@ -20,7 +20,7 @@ header {
 }
 
 .title {
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -31,7 +31,7 @@ header {
 }
 
 .link-text {
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
