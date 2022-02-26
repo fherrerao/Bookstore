@@ -25,7 +25,7 @@ const AddBook = () => {
 
   return (
     <>
-      <div className="Line container"></div>
+      <div className="line container">{ }</div>
       <div className="container book-container-b">
         <h2 className="add-book-title ">ADD NEW BOOK</h2>
         <form onSubmit={sendBook} action="" className="d-flex j-content-between">
