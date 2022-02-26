@@ -41,3 +41,9 @@ header {
   color: var(--black-two);
   text-decoration: none;
 }
+
+.link-text:hover,
+img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
