@@ -1,0 +1,49 @@
+:root {
+  --black-two: #121212;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.header {
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.header nav {
+  column-gap: 3rem;
+}
+
+header {
+  background-color: white;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.link-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+  text-decoration: none;
+}
+
+.link-text:hover,
+img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
