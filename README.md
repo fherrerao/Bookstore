@@ -4,6 +4,9 @@
 
 > Bookstore is a project built with React redux, implemented with `Ducks` files structure and, React Router to interact between the different tabs of the project. You can manage information of a book interact with an API.
 
+![bookstore](https://user-images.githubusercontent.com/91301423/155862896-0c6997f8-8fa2-4558-9604-6f1d8dd8296f.png)
+
+
 ## Built With
 
 - HTML/CSS
