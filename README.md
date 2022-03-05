@@ -16,7 +16,7 @@
 
 ## Live Demo
 
-[Demo link](https://fherrerao.github.io/Math-magician/) (If available).
+[Demo link](https://bookstore-fh.herokuapp.com/).
 
 
 
